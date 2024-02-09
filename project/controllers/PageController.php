@@ -9,15 +9,18 @@
 		public function __construct()
 		{
 			$this->pages = [
-				1 => 'страница 1',
-				2 => 'страница 2',
-				3 => 'страница 3',
+				1 => ['title'=>'страница 1', 'text'=>'текст страницы 1'],
+				2 => ['title'=>'страница 2', 'text'=>'текст страницы 2'],
+				3 => ['title'=>'страница 3', 'text'=>'текст страницы 3'],
 			];
 		}
 
 		public function show($params)
 		{
-			echo $this->pages[ $params['id'] ]; // выводим страницу по номеру
+			$this->title = $this->pages[$params['n']]['title'];
+			$data = $this->pages[$params['n']];
+
+			return $this->render('page/show', $data); 
 		}
 
 		public function show1()

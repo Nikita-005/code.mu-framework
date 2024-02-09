@@ -6,6 +6,7 @@
 		new Route('/my-page1/', 'page', 'show1'),
 		new Route('/my-page2/', 'page', 'show2'),
 		new Route('/action1/', 'test', 'act1'),
+		new Route('/pages/:n', 'page', 'show'),
 		new Route('/action2/', 'test', 'act2'),
 		new Route('/action3/', 'test', 'act3'),
 		new Route('/test/:var1/:var2/', 'page', 'act'),
@@ -14,6 +15,7 @@
 		new Route('/user/first/:id', 'user', 'first'),
 		new Route('/user/:id/', 'user', 'show'),
 		new Route('/user/:id/:key/', 'user', 'info'),
+		new Route('/product/all/', 'product', 'all'),
 		new Route('/product/:n/', 'product', 'show'),
 		
 		

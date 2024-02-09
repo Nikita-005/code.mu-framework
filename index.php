@@ -31,6 +31,7 @@
 	});
 	
 	$routes = require __DIR__ . '/project/config/routes.php';
+	$dir = __DIR__;
 	$route = '/'.$_GET['route'] ?? '';
 	$rUri = $_SERVER['REQUEST_URI'];
 	$track = ( new Router )      -> getTrack($routes, $route);

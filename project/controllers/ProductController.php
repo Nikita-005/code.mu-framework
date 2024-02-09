@@ -51,7 +51,9 @@
 
 		public function all()
 		{
+            $dir = __DIR__;
 			return $this->render('product/all', ['header'=>'Продукты магазина', 'goods'=>$this->products]);
+
 		}
 
 	}

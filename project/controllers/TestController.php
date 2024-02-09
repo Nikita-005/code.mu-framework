@@ -4,9 +4,14 @@
 	
 	class TestController extends Controller
 	{
-		public function act1()
+		public function act()
 		{
-			echo 'act1';
+			$this->title = 'Действие act контроллера test';
+			return $this->render('test/act', [
+				'var1' => 'eee',
+				'var2' => 'bbb',
+				'var3' => 'kkk',
+			]);
 		}
 		
 		public function act2()
